@@ -1,0 +1,11 @@
+<div>
+    <span>Pages: </span>
+    <ng-container *ngFor="let item of pageCountArray">
+        <span *ngIf="item === currentPage">
+            {{item}}
+        </span>
+        <span *ngIf="item !== currentPage">
+            <a href="#" (click)="handlePageClick(item)">{{item}}</a>
+        </span>
+    </ng-container>
+</div>

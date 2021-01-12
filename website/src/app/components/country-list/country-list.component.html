@@ -1,0 +1,22 @@
+<ng-container *ngIf="loading else loaded">
+    <div>Loading content ...</div>
+</ng-container>
+
+<ng-template #loaded>
+    <ng-container *ngIf="!content else showContent">
+        <h3>No Countries Found!</h3>
+    </ng-container>
+
+    <ng-template #showContent>
+        <app-pagination [(currentPage)]="content.currentPage" [pageCount]="content.pageCount"
+            (pageChange)="pageChange($event)">
+        </app-pagination>
+        <div class="content">
+            <ul>
+                <li *ngFor="let country of content.countries">
+                    <app-country [country]="country"></app-country>
+                </li>
+            </ul>
+        </div>
+    </ng-template>
+</ng-template>

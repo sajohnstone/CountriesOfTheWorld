@@ -1,0 +1,31 @@
+<table>
+    <tr (click)="countryClickHandler()">
+        <td>
+            <img src="{{country.flagUrl}}" >
+        </td>
+        <td>{{country.name}}</td>
+    </tr>
+</table>
+
+<div *ngIf="showDetails">
+    <ul>
+        <li>
+            <label>Capital City:</label> <span>{{country.capitalCity}}</span>
+        </li>
+        <li>
+            <label>Population:</label> <span>{{country.population | number}}</span>
+        </li>
+        <li>
+            <label>Languages:</label> <span>{{country.languages.join(', ')}}</span>
+        </li>
+        <li>
+            <label>Currencies:</label> <span>{{country.currencies.join(', ')}}</span>
+        </li>
+        <li>
+            <label>Border With:</label> <span>{{country.bordersWith.join(', ')}}</span>
+        </li>
+        <li>
+            <label>Timezones:</label> <span>{{country.timeZones.join(', ')}}</span>
+        </li>
+    </ul>
+</div>

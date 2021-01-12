@@ -1,0 +1,22 @@
+{
+  "name": "countiesoftheworld",
+  "version": "1.0.0",
+  "description": "Shows counties of the world",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd website && ng test",
+    "build": "cd website && npm i",
+    "start": "cd website && ng serve",
+    "api": "cd api/Countries.Api && dotnet run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajohnstone/CountriesOfTheWorld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sajohnstone/CountriesOfTheWorld/issues"
+  },
+  "homepage": "https://github.com/sajohnstone/CountriesOfTheWorld#readme"
+}
